@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="Clicker"
-run/main_scene="res://Control.tscn"
+run/main_scene="res://Scenes/Control.tscn"
 config/icon="res://icon.png"
 
 [rendering]
