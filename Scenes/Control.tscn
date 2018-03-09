@@ -1,0 +1,100 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Scripts/Control.gd" type="Script" id=1]
+[ext_resource path="res://Images/F.png" type="Texture" id=2]
+[ext_resource path="res://Images/PressF.png" type="Texture" id=3]
+[ext_resource path="res://Images/HoverF.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/Button.gd" type="Script" id=5]
+[ext_resource path="res://Images/Gangster usable.png" type="Texture" id=6]
+[ext_resource path="res://Images/Gangster pressed.png" type="Texture" id=7]
+[ext_resource path="res://Images/Gangster unusable.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/TextureButton.gd" type="Script" id=9]
+[ext_resource path="res://Scripts/Timer.gd" type="Script" id=10]
+
+[node name="main" type="Control" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -2.0
+margin_top = 3.0
+margin_right = 1430.0
+margin_bottom = 613.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Anchor", "Margin" ]
+
+[node name="F" type="TextureButton" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 20.0
+margin_top = 115.0
+margin_right = 489.0
+margin_bottom = 470.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+script = ExtResource( 5 )
+_sections_unfolded = [ "Material", "Pause", "Textures", "Visibility" ]
+
+[node name="Gangster" type="TextureButton" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 524.0
+margin_top = 26.0
+margin_right = 1020.0
+margin_bottom = 122.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_disabled = ExtResource( 8 )
+script = ExtResource( 9 )
+_sections_unfolded = [ "Pause", "Size Flags", "Textures" ]
+
+[node name="Timer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+script = ExtResource( 10 )
+
+[connection signal="button_down" from="F" to="F" method="_on_F_button_down"]
+
+[connection signal="gangster_enable" from="F" to="Gangster" method="_on_F_gangster_enable"]
+
+
