@@ -1,15 +1,25 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Control.gd" type="Script" id=1]
-[ext_resource path="res://F.png" type="Texture" id=2]
-[ext_resource path="res://PressF.png" type="Texture" id=3]
-[ext_resource path="res://HoverF.png" type="Texture" id=4]
-[ext_resource path="res://Button.gd" type="Script" id=5]
-[ext_resource path="res://Gangster usable.png" type="Texture" id=6]
-[ext_resource path="res://Gangster pressed.png" type="Texture" id=7]
-[ext_resource path="res://Gangster unusable.png" type="Texture" id=8]
-[ext_resource path="res://TextureButton.gd" type="Script" id=9]
-[ext_resource path="res://Timer.gd" type="Script" id=10]
+[ext_resource path="res://Scripts/Control.gd" type="Script" id=1]
+[ext_resource path="res://Images/F.png" type="Texture" id=2]
+[ext_resource path="res://Images/PressF.png" type="Texture" id=3]
+[ext_resource path="res://Images/HoverF.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/Button.gd" type="Script" id=5]
+[ext_resource path="res://Images/Gangster usable.png" type="Texture" id=6]
+[ext_resource path="res://Images/Gangster pressed.png" type="Texture" id=7]
+[ext_resource path="res://Images/Gangster unusable.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/TextureButton.gd" type="Script" id=9]
+[ext_resource path="res://Scripts/Timer.gd" type="Script" id=10]
+
+
+
+
+
+
+
+
+
+
 
 [node name="main" type="Control" index="0"]
 

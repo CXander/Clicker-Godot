@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HoverF.png-cf932de95a8fc5620cf822577de9b250.stex"
+path="res://.import/Gangster usable.png-87fce81d6b6260798b5dd1db604b15d9.stex"
 
 [deps]
 
-source_file="res://HoverF.png"
-source_md5="d3c90d086d7e3a950c93bf89d6da2814"
+source_file="res://Images/Gangster usable.png"
+source_md5="5099b6193ce55810fca24324279fbf7b"
 
-dest_files=[ "res://.import/HoverF.png-cf932de95a8fc5620cf822577de9b250.stex" ]
-dest_md5="472e217d93d0a76a99f608c6e5428079"
+dest_files=[ "res://.import/Gangster usable.png-87fce81d6b6260798b5dd1db604b15d9.stex" ]
+dest_md5="af76c1c2dffd31051baa93dba4e43047"
 
 [params]
 
