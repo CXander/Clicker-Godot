@@ -57,6 +57,9 @@ texture_hover = ExtResource( 4 )
 script = ExtResource( 5 )
 _sections_unfolded = [ "Material", "Pause", "Textures", "Visibility" ]
 
+wallet = 0
+
+
 [node name="Gangster" type="TextureButton" parent="." index="1"]
 
 anchor_left = 0.0
