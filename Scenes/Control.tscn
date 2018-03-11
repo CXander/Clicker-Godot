@@ -35,7 +35,9 @@ size_flags_vertical = 1
 script = ExtResource( 1 )
 _sections_unfolded = [ "Anchor", "Margin" ]
 
-[node name="F" type="TextureButton" parent="." index="0"]
+[node name="F" type="TextureButton" parent="." index="0" groups=[
+"persistent",
+]]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -63,7 +65,9 @@ script = ExtResource( 5 )
 _sections_unfolded = [ "Material", "Pause", "Textures", "Visibility" ]
 wallet = 0
 
-[node name="Gangster" type="TextureButton" parent="F" index="0"]
+[node name="Gangster" type="TextureButton" parent="F" index="0" groups=[
+"persistent",
+]]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -91,7 +95,9 @@ texture_disabled = ExtResource( 8 )
 script = ExtResource( 9 )
 _sections_unfolded = [ "Anchor", "Pause", "Size Flags", "Textures" ]
 
-[node name="Enforcer" type="TextureButton" parent="F" index="1"]
+[node name="Enforcer" type="TextureButton" parent="F" index="1" groups=[
+"persistent",
+]]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -119,7 +125,9 @@ texture_disabled = ExtResource( 8 )
 script = ExtResource( 10 )
 _sections_unfolded = [ "Pause", "Size Flags", "Textures" ]
 
-[node name="Framer" type="TextureButton" parent="F" index="2"]
+[node name="Framer" type="TextureButton" parent="F" index="2" groups=[
+"persistent",
+]]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -147,7 +155,9 @@ texture_disabled = ExtResource( 8 )
 script = ExtResource( 11 )
 _sections_unfolded = [ "Pause", "Size Flags", "Textures" ]
 
-[node name="Consig" type="TextureButton" parent="F" index="3"]
+[node name="Consig" type="TextureButton" parent="F" index="3" groups=[
+"persistent",
+]]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -175,7 +185,9 @@ texture_disabled = ExtResource( 8 )
 script = ExtResource( 12 )
 _sections_unfolded = [ "Pause", "Size Flags", "Textures" ]
 
-[node name="Hitman" type="TextureButton" parent="F" index="4"]
+[node name="Hitman" type="TextureButton" parent="F" index="4" groups=[
+"persistent",
+]]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -203,7 +215,9 @@ texture_disabled = ExtResource( 8 )
 script = ExtResource( 13 )
 _sections_unfolded = [ "Pause", "Size Flags", "Textures" ]
 
-[node name="Godfather" type="TextureButton" parent="F" index="5"]
+[node name="Godfather" type="TextureButton" parent="F" index="5" groups=[
+"persistent",
+]]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -265,19 +279,19 @@ group = null
 
 [connection signal="enable_button" from="F" to="F/Gangster" method="_on_F_enable_button"]
 
-[connection signal="enable_button" from="F" to="F/Framer" method="_on_F_enable_button"]
+[connection signal="enable_button" from="F" to="F/Consig" method="_on_F_enable_button"]
 
-[connection signal="enable_button" from="F" to="F/Hitman" method="_on_F_enable_button"]
+[connection signal="enable_button" from="F" to="F/Framer" method="_on_F_enable_button"]
 
 [connection signal="enable_button" from="F" to="F/Enforcer" method="_on_F_enable_button"]
 
-[connection signal="enable_button" from="F" to="F/Consig" method="_on_F_enable_button"]
+[connection signal="enable_button" from="F" to="F/Hitman" method="_on_F_enable_button"]
 
 [connection signal="enable_button" from="F" to="F/Godfather" method="_on_F_enable_button"]
 
-[connection signal="button_down" from="F/Gangster" to="F/Gangster" method="_on_Gangster_button_down"]
-
 [connection signal="button_down" from="F/Gangster" to="F" method="_on_Gangster_button_down"]
+
+[connection signal="button_down" from="F/Gangster" to="F/Gangster" method="_on_Gangster_button_down"]
 
 [connection signal="respect_from_gangsters" from="F/Gangster" to="F" method="_on_Gangster_respect_from_gangsters"]
 
@@ -287,9 +301,9 @@ group = null
 
 [connection signal="respect_from_enforcers" from="F/Enforcer" to="F" method="_on_Enforcer_respect_from_enforcers"]
 
-[connection signal="button_down" from="F/Framer" to="F/Framer" method="_on_Framer_button_down"]
-
 [connection signal="button_down" from="F/Framer" to="F" method="_on_Framer_button_down"]
+
+[connection signal="button_down" from="F/Framer" to="F/Framer" method="_on_Framer_button_down"]
 
 [connection signal="respect_from_framers" from="F/Framer" to="F" method="_on_Framer_respect_from_framers"]
 
@@ -299,9 +313,9 @@ group = null
 
 [connection signal="respect_from_consigs" from="F/Consig" to="F" method="_on_Consig_respect_from_consigs"]
 
-[connection signal="button_down" from="F/Hitman" to="F/Hitman" method="_on_Hitman_button_down"]
-
 [connection signal="button_down" from="F/Hitman" to="F" method="_on_Hitman_button_down"]
+
+[connection signal="button_down" from="F/Hitman" to="F/Hitman" method="_on_Hitman_button_down"]
 
 [connection signal="respect_from_hitmen" from="F/Hitman" to="F" method="_on_Hitman_respect_from_hitmen"]
 
@@ -313,13 +327,13 @@ group = null
 
 [connection signal="timeout" from="GlobalTimer" to="F/Gangster" method="_on_GlobalTimer_timeout"]
 
-[connection signal="timeout" from="GlobalTimer" to="F/Framer" method="_on_GlobalTimer_timeout"]
+[connection signal="timeout" from="GlobalTimer" to="F/Consig" method="_on_GlobalTimer_timeout"]
 
-[connection signal="timeout" from="GlobalTimer" to="F/Hitman" method="_on_GlobalTimer_timeout"]
+[connection signal="timeout" from="GlobalTimer" to="F/Framer" method="_on_GlobalTimer_timeout"]
 
 [connection signal="timeout" from="GlobalTimer" to="F/Enforcer" method="_on_GlobalTimer_timeout"]
 
-[connection signal="timeout" from="GlobalTimer" to="F/Consig" method="_on_GlobalTimer_timeout"]
+[connection signal="timeout" from="GlobalTimer" to="F/Hitman" method="_on_GlobalTimer_timeout"]
 
 [connection signal="timeout" from="GlobalTimer" to="F/Godfather" method="_on_GlobalTimer_timeout"]
 

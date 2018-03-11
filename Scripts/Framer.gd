@@ -28,3 +28,11 @@ func _on_Framer_button_down():
 func _on_F_enable_button(me, boolval):
 	if(me == 2):
 		set_disabled(!boolval)
+		
+func save():
+	var save_dict = {
+		
+		Framers = Framers
+	}
+	
+	return save_dict

@@ -151,3 +151,11 @@ func _on_Godfather_respect_from_godfathers(respect):
 func _on_Godfather_button_down():
 	wallet -= Godfather.cost
 	print(wallet)
+	
+func save():
+	var save_dict = {
+		
+		wallet = wallet
+		
+	}
+	return save_dict

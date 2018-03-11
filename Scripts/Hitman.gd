@@ -28,3 +28,8 @@ func _on_Hitman_button_down():
 func _on_F_enable_button(me, boolval):
 	if(me == 4):
 		set_disabled(!boolval)
+func save():
+	var save_dict = {
+		Hitmen= Hitmen
+	}
+	return save_dict

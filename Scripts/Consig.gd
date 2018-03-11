@@ -28,3 +28,9 @@ func _on_Consig_button_down():
 func _on_F_enable_button(me, boolval):
 	if(me == 3):
 		set_disabled(!boolval)
+
+func save():
+	var save_dict = {
+		Consigs = Consigs
+	}
+	return save_dict

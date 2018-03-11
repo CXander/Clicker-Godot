@@ -34,4 +34,13 @@ func _on_F_enable_button(me, boolval):
 	if(me == 0):
 		set_disabled(!boolval)
 
+func save():
+	var save_dict = {
+		
+		Gangsters = Gangsters
+	}
+	return save_dict
+
 #all child nodes act exactly as this one with differeing base cost
+
+

@@ -28,3 +28,8 @@ func _on_Godfather_button_down():
 func _on_F_enable_button(me, boolval):
 	if(me == 5):
 		set_disabled(!boolval)
+func save():
+	var save_dict = {
+		Godfathers = Godfathers
+	}
+	return save_dict

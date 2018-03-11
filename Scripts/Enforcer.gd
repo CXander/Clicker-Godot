@@ -27,3 +27,10 @@ func _on_Enforcer_button_down():
 func _on_F_enable_button(me, boolval):
 	if(me == 1):
 		set_disabled(!boolval)
+		
+func save():
+	var save_dict = {
+		
+		Enforcers = Enforcers
+	}
+	return save_dict
