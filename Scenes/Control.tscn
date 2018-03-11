@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/Control.gd" type="Script" id=1]
 [ext_resource path="res://Images/F.png" type="Texture" id=2]
@@ -8,8 +8,13 @@
 [ext_resource path="res://Images/Gangster usable.png" type="Texture" id=6]
 [ext_resource path="res://Images/Gangster pressed.png" type="Texture" id=7]
 [ext_resource path="res://Images/Gangster unusable.png" type="Texture" id=8]
-[ext_resource path="res://Scripts/TextureButton.gd" type="Script" id=9]
-[ext_resource path="res://Scripts/Timer.gd" type="Script" id=10]
+[ext_resource path="res://Scripts/Gangster.gd" type="Script" id=9]
+[ext_resource path="res://Scripts/Enforcer.gd" type="Script" id=10]
+[ext_resource path="res://Scripts/Framer.gd" type="Script" id=11]
+[ext_resource path="res://Scripts/Consig.gd" type="Script" id=12]
+[ext_resource path="res://Scripts/Hitman.gd" type="Script" id=13]
+[ext_resource path="res://Scripts/Godfather.gd" type="Script" id=14]
+[ext_resource path="res://Scripts/Timer.gd" type="Script" id=15]
 
 [node name="main" type="Control" index="0"]
 
@@ -18,9 +23,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -2.0
-margin_top = 3.0
-margin_right = 1430.0
-margin_bottom = 613.0
+margin_top = -1.0
+margin_right = 1035.0
+margin_bottom = 627.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -36,10 +41,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 20.0
-margin_top = 115.0
-margin_right = 489.0
-margin_bottom = 470.0
+margin_left = 3.0
+margin_top = 178.0
+margin_right = 472.0
+margin_bottom = 533.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -56,20 +61,18 @@ texture_pressed = ExtResource( 3 )
 texture_hover = ExtResource( 4 )
 script = ExtResource( 5 )
 _sections_unfolded = [ "Material", "Pause", "Textures", "Visibility" ]
-
 wallet = 0
 
-
-[node name="Gangster" type="TextureButton" parent="." index="1"]
+[node name="Gangster" type="TextureButton" parent="F" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 524.0
-margin_top = 26.0
-margin_right = 1020.0
-margin_bottom = 122.0
+margin_left = 538.0
+margin_top = -167.0
+margin_right = 1034.0
+margin_bottom = -71.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -86,18 +89,238 @@ texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 7 )
 texture_disabled = ExtResource( 8 )
 script = ExtResource( 9 )
+_sections_unfolded = [ "Anchor", "Pause", "Size Flags", "Textures" ]
+
+[node name="Enforcer" type="TextureButton" parent="F" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 540.0
+margin_top = -65.0
+margin_right = 1036.0
+margin_bottom = 31.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_disabled = ExtResource( 8 )
+script = ExtResource( 10 )
 _sections_unfolded = [ "Pause", "Size Flags", "Textures" ]
 
-[node name="Timer" type="Timer" parent="." index="2"]
+[node name="Framer" type="TextureButton" parent="F" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 540.0
+margin_top = 37.0
+margin_right = 1036.0
+margin_bottom = 133.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_disabled = ExtResource( 8 )
+script = ExtResource( 11 )
+_sections_unfolded = [ "Pause", "Size Flags", "Textures" ]
+
+[node name="Consig" type="TextureButton" parent="F" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 536.0
+margin_top = 143.0
+margin_right = 1032.0
+margin_bottom = 239.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_disabled = ExtResource( 8 )
+script = ExtResource( 12 )
+_sections_unfolded = [ "Pause", "Size Flags", "Textures" ]
+
+[node name="Hitman" type="TextureButton" parent="F" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 533.0
+margin_top = 243.0
+margin_right = 1029.0
+margin_bottom = 339.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_disabled = ExtResource( 8 )
+script = ExtResource( 13 )
+_sections_unfolded = [ "Pause", "Size Flags", "Textures" ]
+
+[node name="Godfather" type="TextureButton" parent="F" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 536.0
+margin_top = 345.0
+margin_right = 1033.0
+margin_bottom = 441.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_disabled = ExtResource( 8 )
+script = ExtResource( 14 )
+_sections_unfolded = [ "Margin", "Pause", "Size Flags", "Textures" ]
+
+[node name="GlobalTimer" type="Timer" parent="." index="1"]
 
 process_mode = 1
 wait_time = 1.0
 one_shot = false
-autostart = false
-script = ExtResource( 10 )
+autostart = true
+script = ExtResource( 15 )
+
+[node name="buyMultiplier" type="TextureButton" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 266.0
+margin_bottom = 157.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
 
 [connection signal="button_down" from="F" to="F" method="_on_F_button_down"]
 
-[connection signal="gangster_enable" from="F" to="Gangster" method="_on_F_gangster_enable"]
+[connection signal="enable_button" from="F" to="F/Gangster" method="_on_F_enable_button"]
+
+[connection signal="enable_button" from="F" to="F/Framer" method="_on_F_enable_button"]
+
+[connection signal="enable_button" from="F" to="F/Hitman" method="_on_F_enable_button"]
+
+[connection signal="enable_button" from="F" to="F/Enforcer" method="_on_F_enable_button"]
+
+[connection signal="enable_button" from="F" to="F/Consig" method="_on_F_enable_button"]
+
+[connection signal="enable_button" from="F" to="F/Godfather" method="_on_F_enable_button"]
+
+[connection signal="button_down" from="F/Gangster" to="F/Gangster" method="_on_Gangster_button_down"]
+
+[connection signal="button_down" from="F/Gangster" to="F" method="_on_Gangster_button_down"]
+
+[connection signal="respect_from_gangsters" from="F/Gangster" to="F" method="_on_Gangster_respect_from_gangsters"]
+
+[connection signal="button_down" from="F/Enforcer" to="F" method="_on_Enforcer_button_down"]
+
+[connection signal="button_down" from="F/Enforcer" to="F/Enforcer" method="_on_Enforcer_button_down"]
+
+[connection signal="respect_from_enforcers" from="F/Enforcer" to="F" method="_on_Enforcer_respect_from_enforcers"]
+
+[connection signal="button_down" from="F/Framer" to="F/Framer" method="_on_Framer_button_down"]
+
+[connection signal="button_down" from="F/Framer" to="F" method="_on_Framer_button_down"]
+
+[connection signal="respect_from_framers" from="F/Framer" to="F" method="_on_Framer_respect_from_framers"]
+
+[connection signal="button_down" from="F/Consig" to="F" method="_on_Consig_button_down"]
+
+[connection signal="button_down" from="F/Consig" to="F/Consig" method="_on_Consig_button_down"]
+
+[connection signal="respect_from_consigs" from="F/Consig" to="F" method="_on_Consig_respect_from_consigs"]
+
+[connection signal="button_down" from="F/Hitman" to="F/Hitman" method="_on_Hitman_button_down"]
+
+[connection signal="button_down" from="F/Hitman" to="F" method="_on_Hitman_button_down"]
+
+[connection signal="respect_from_hitmen" from="F/Hitman" to="F" method="_on_Hitman_respect_from_hitmen"]
+
+[connection signal="button_down" from="F/Godfather" to="F" method="_on_Godfather_button_down"]
+
+[connection signal="button_down" from="F/Godfather" to="F/Godfather" method="_on_Godfather_button_down"]
+
+[connection signal="respect_from_godfathers" from="F/Godfather" to="F" method="_on_Godfather_respect_from_godfathers"]
+
+[connection signal="timeout" from="GlobalTimer" to="F/Gangster" method="_on_GlobalTimer_timeout"]
+
+[connection signal="timeout" from="GlobalTimer" to="F/Framer" method="_on_GlobalTimer_timeout"]
+
+[connection signal="timeout" from="GlobalTimer" to="F/Hitman" method="_on_GlobalTimer_timeout"]
+
+[connection signal="timeout" from="GlobalTimer" to="F/Enforcer" method="_on_GlobalTimer_timeout"]
+
+[connection signal="timeout" from="GlobalTimer" to="F/Consig" method="_on_GlobalTimer_timeout"]
+
+[connection signal="timeout" from="GlobalTimer" to="F/Godfather" method="_on_GlobalTimer_timeout"]
 
 
